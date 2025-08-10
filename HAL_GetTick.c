@@ -93,10 +93,11 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+	 uint32_t previous_tick = 0 ;
   while (1)
   {
     /* USER CODE END WHILE */
-	  static uint32_t previous_tick = 0 ;
+	 
 	  uint32_t current_tick = HAL_GetTick();
 	  	if ( (current_tick - previous_tick) >= 250 )
 	  		{
@@ -208,3 +209,4 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
+
